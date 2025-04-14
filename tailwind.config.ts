@@ -77,6 +77,14 @@ export default {
 				sans: ['Inter', 'sans-serif'],
 				heading: ['Poppins', 'sans-serif'],
 			},
+			backgroundImage: {
+				'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
+				'gradient-conic': 'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+			},
+			boxShadow: {
+				'glow': '0 0 20px 5px var(--tw-shadow-color)',
+				'soft': '0 8px 40px -12px var(--tw-shadow-color)',
+			},
 			keyframes: {
 				'accordion-down': {
 					from: {
@@ -93,11 +101,21 @@ export default {
 					to: {
 						height: '0'
 					}
+				},
+				'pulse-slow': {
+					'0%, 100%': { opacity: 1 },
+					'50%': { opacity: 0.8 }
+				},
+				'rotate-glow': {
+					'0%': { transform: 'rotate(0deg)' },
+					'100%': { transform: 'rotate(360deg)' }
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'pulse-slow': 'pulse-slow 6s ease-in-out infinite',
+				'rotate-glow': 'rotate-glow 15s linear infinite'
 			}
 		}
 	},
