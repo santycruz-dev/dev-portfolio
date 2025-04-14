@@ -7,7 +7,7 @@ import Bio from "@/components/Bio";
 import Contact from "@/components/Contact";
 import { projects } from "@/data/projects";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Code, ExternalLink, Layout, Zap } from "lucide-react";
+import { ArrowRight, Code, ExternalLink, Layout, Terminal, Zap } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const Index = () => {
@@ -16,74 +16,114 @@ const Index = () => {
       <Header />
       
       {/* Hero section */}
-      <section className="py-16 md:py-24 relative overflow-hidden">
-        <div className="container flex flex-col items-center text-center">
-          <div className="max-w-3xl mx-auto space-y-5 animate-fade-in animate-slide-up">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight">
-              Desarrollador Frontend <span className="text-primary">creativo y apasionado</span>
+      <section className="py-16 md:py-24 relative">
+        <div className="container">
+          <div className="max-w-4xl space-y-6 animate-fade-in animate-slide-up">
+            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight leading-tight">
+              Enhancing <span className="text-primary">New</span> Web3 Experience
             </h1>
-            <p className="text-xl text-muted-foreground">
+            <p className="text-xl text-muted-foreground max-w-2xl">
               Construyo experiencias web modernas, accesibles y de alto rendimiento
               que conectan con los usuarios y resuelven problemas reales.
             </p>
-            <div className="flex flex-wrap justify-center gap-4 pt-6">
-              <Button size="lg" asChild>
-                <Link to="/proyectos">
-                  Ver proyectos <ArrowRight className="ml-2 h-5 w-5" />
+            <div className="flex flex-wrap gap-4 pt-6">
+              <Button size="lg" className="futuristic-button group">
+                <Link to="/proyectos" className="flex items-center">
+                  Ver proyectos
+                  <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
                 </Link>
-              </Button>
-              <Button size="lg" variant="outline" asChild>
-                <Link to="/contacto">Contacto</Link>
               </Button>
             </div>
           </div>
         </div>
 
-        {/* Background decorative elements */}
-        <div className="hidden md:block absolute -top-24 -right-24 w-96 h-96 bg-primary/10 rounded-full blur-3xl" />
-        <div className="hidden md:block absolute -bottom-24 -left-24 w-96 h-96 bg-accent/10 rounded-full blur-3xl" />
+        <div className="hidden md:block absolute top-1/3 right-10 w-64 h-64 border border-primary/20 rounded-full opacity-20"></div>
+        <div className="hidden md:block absolute top-1/2 right-32 w-32 h-32 border border-accent/20 rounded-full opacity-10"></div>
       </section>
 
       {/* Features section */}
-      <section className="py-16 bg-secondary/50">
+      <section className="py-16">
         <div className="container">
-          <div className="text-center mb-14">
-            <h2 className="section-title inline-block mx-auto">Mi enfoque</h2>
+          <div className="space-y-16">
+            <div className="flex items-start gap-4">
+              <div className="number-indicator">1</div>
+              <div>
+                <h3 className="text-xl font-semibold mb-2">Reliable, <span className="text-muted-foreground">tamper-proof network</span></h3>
+                <p className="text-muted-foreground max-w-2xl">
+                  Interfaces limpias, elegantes y altamente usables que priorizan la experiencia de usuario.
+                  Diseño optimizado para diferentes dispositivos y plataformas.
+                </p>
+              </div>
+            </div>
+            
+            <div className="flex items-start gap-4">
+              <div className="number-indicator">2</div>
+              <div>
+                <h3 className="text-xl font-semibold mb-2">Seamless <span className="text-muted-foreground">connection to any API</span></h3>
+                <p className="text-muted-foreground max-w-2xl">
+                  Desarrollo estructurado, mantenible y siguiendo las mejores prácticas actuales.
+                  Integración con APIs externas y servicios de terceros.
+                </p>
+              </div>
+            </div>
+            
+            <div className="flex items-start gap-4">
+              <div className="number-indicator">3</div>
+              <div>
+                <h3 className="text-xl font-semibold mb-2">Proven, <span className="text-muted-foreground">ready-made solutions</span></h3>
+                <p className="text-muted-foreground max-w-2xl">
+                  Aplicaciones optimizadas que cargan rápidamente y funcionan con fluidez en cualquier dispositivo.
+                  Soluciones escalables y adaptables a diferentes necesidades.
+                </p>
+              </div>
+            </div>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="bg-background rounded-lg p-6 shadow-sm border border-border animate-fade-in animate-slide-up" style={{ animationDelay: "100ms" }}>
-              <div className="h-12 w-12 rounded-full bg-primary/10 flex items-center justify-center mb-4">
-                <Layout className="h-6 w-6 text-primary" />
+        </div>
+      </section>
+
+      {/* Code example section */}
+      <section className="py-16 bg-gradient-to-b from-secondary to-background">
+        <div className="container">
+          <div className="mb-10">
+            <h2 className="text-3xl font-bold">
+              Integrate services<br />
+              <span className="text-gradient">into your dApp</span>
+            </h2>
+          </div>
+          
+          <div className="max-w-3xl mx-auto">
+            <div className="rounded-md overflow-hidden border border-border/50 bg-black">
+              <div className="flex items-center justify-between bg-secondary p-2">
+                <div className="flex space-x-1.5">
+                  <div className="w-3 h-3 bg-red-500 rounded-full"></div>
+                  <div className="w-3 h-3 bg-yellow-500 rounded-full"></div>
+                  <div className="w-3 h-3 bg-green-500 rounded-full"></div>
+                </div>
               </div>
-              <h3 className="text-xl font-semibold mb-2">Diseño Moderno</h3>
-              <p className="text-muted-foreground">
-                Interfaces limpias, elegantes y altamente usables que priorizan la experiencia de usuario.
-              </p>
-            </div>
-            <div className="bg-background rounded-lg p-6 shadow-sm border border-border animate-fade-in animate-slide-up" style={{ animationDelay: "200ms" }}>
-              <div className="h-12 w-12 rounded-full bg-primary/10 flex items-center justify-center mb-4">
-                <Code className="h-6 w-6 text-primary" />
-              </div>
-              <h3 className="text-xl font-semibold mb-2">Código Limpio</h3>
-              <p className="text-muted-foreground">
-                Desarrollo estructurado, mantenible y siguiendo las mejores prácticas actuales.
-              </p>
-            </div>
-            <div className="bg-background rounded-lg p-6 shadow-sm border border-border animate-fade-in animate-slide-up" style={{ animationDelay: "300ms" }}>
-              <div className="h-12 w-12 rounded-full bg-primary/10 flex items-center justify-center mb-4">
-                <Zap className="h-6 w-6 text-primary" />
-              </div>
-              <h3 className="text-xl font-semibold mb-2">Alto Rendimiento</h3>
-              <p className="text-muted-foreground">
-                Aplicaciones optimizadas que cargan rápidamente y funcionan con fluidez en cualquier dispositivo.
-              </p>
+              <pre className="p-4 overflow-x-auto">
+                <code className="text-green-400 font-mono">
+{`import { Web3Experience } from '@web3-experience/core';
+
+const App = () => {
+  return (
+    <Web3Experience
+      apiKey="YOUR_API_KEY"
+      theme="dark"
+      features={['wallet', 'transactions', 'nfts']}
+    >
+      <YourAppContent />
+    </Web3Experience>
+  );
+};`}
+                </code>
+              </pre>
             </div>
           </div>
         </div>
       </section>
 
       {/* Projects preview section */}
-      <section className="py-16 md:py-24">
+      <section className="py-16">
         <div className="container">
           <div className="flex justify-between items-center mb-14">
             <h2 className="section-title">Proyectos destacados</h2>
@@ -99,6 +139,92 @@ const Index = () => {
             {projects.slice(0, 2).map((project, index) => (
               <ProjectCard key={index} project={project} />
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Program boxes section */}
+      <section className="py-16 bg-gradient-to-b from-background to-secondary/40">
+        <div className="container">
+          <div className="mb-10">
+            <h2 className="text-3xl font-bold">
+              Get involved <br/>
+              <span className="text-primary">through our grant</span> Programs
+            </h2>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="border border-border/40 bg-card p-6 rounded-md">
+              <h3 className="text-lg font-semibold mb-4">Community grant program</h3>
+              <p className="text-muted-foreground mb-6">
+                Participa en nuestros programas de desarrollo comunitario y obtén financiamiento para tus proyectos innovadores.
+              </p>
+              <Link to="#" className="text-primary text-sm hover:underline">Leer más</Link>
+            </div>
+            
+            <div className="border border-border/40 bg-card p-6 rounded-md">
+              <h3 className="text-lg font-semibold mb-4">Integration grants program</h3>
+              <p className="text-muted-foreground mb-6">
+                Descubre oportunidades para integrar nuevas tecnologías en tus proyectos existentes con nuestro programa de ayudas.
+              </p>
+              <Link to="#" className="text-primary text-sm hover:underline">Leer más</Link>
+            </div>
+            
+            <div className="border border-border/40 bg-card p-6 rounded-md">
+              <h3 className="text-lg font-semibold mb-4">Social impact program</h3>
+              <p className="text-muted-foreground mb-6">
+                Crea aplicaciones que generen un impacto social positivo con el apoyo de nuestro programa especializado.
+              </p>
+              <Link to="#" className="text-primary text-sm hover:underline">Leer más</Link>
+            </div>
+            
+            <div className="border border-border/40 bg-card p-6 rounded-md">
+              <h3 className="text-lg font-semibold mb-4">Easy research program</h3>
+              <p className="text-muted-foreground mb-6">
+                Colabora con equipos de investigación y desarrollo para explorar nuevas posibilidades tecnológicas.
+              </p>
+              <Link to="#" className="text-primary text-sm hover:underline">Leer más</Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* News section */}
+      <section className="py-16">
+        <div className="container">
+          <div className="mb-10">
+            <h2 className="text-3xl font-bold">
+              Our latest<br/>
+              <span className="text-primary">news today</span>
+            </h2>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className="border border-border/40 bg-card p-6 rounded-md flex flex-col md:flex-row gap-4 items-start">
+              <div className="flex-shrink-0">
+                <div className="number-indicator">01</div>
+              </div>
+              <div>
+                <h3 className="text-lg font-semibold mb-2">Lanzamiento de nueva plataforma</h3>
+                <p className="text-muted-foreground mb-4">
+                  Hemos lanzado nuestra nueva plataforma con características mejoradas y un rendimiento optimizado.
+                </p>
+                <p className="text-xs text-muted-foreground/70">Junio 15, 2023</p>
+              </div>
+            </div>
+            
+            <div className="border border-border/40 bg-card p-6 rounded-md flex flex-col md:flex-row gap-4 items-start">
+              <div className="flex-shrink-0">
+                <div className="number-indicator">02</div>
+              </div>
+              <div>
+                <h3 className="text-lg font-semibold mb-2">Colaboración con nuevos partners</h3>
+                <p className="text-muted-foreground mb-4">
+                  Estamos emocionados de anunciar nuevas colaboraciones estratégicas con empresas líderes del sector.
+                </p>
+                <p className="text-xs text-muted-foreground/70">Mayo 28, 2023</p>
+              </div>
+            </div>
           </div>
         </div>
       </section>

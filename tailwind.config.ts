@@ -13,7 +13,7 @@ export default {
 	theme: {
 		container: {
 			center: true,
-			padding: '2rem',
+			padding: '1.5rem',
 			screens: {
 				'sm': '640px',
 				'md': '768px',
@@ -75,6 +75,7 @@ export default {
 			},
 			fontFamily: {
 				sans: ['Inter', 'sans-serif'],
+				mono: ['Roboto Mono', 'monospace'],
 				heading: ['Poppins', 'sans-serif'],
 			},
 			backgroundImage: {

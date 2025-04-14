@@ -1,10 +1,11 @@
 
 import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { Menu, X, Sun, Moon } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const Header: React.FC = () => {
+  const location = useLocation();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [theme, setTheme] = useState<"light" | "dark">("dark");
 
@@ -33,8 +34,12 @@ const Header: React.FC = () => {
     setIsMenuOpen(false);
   };
 
+  const isActive = (path: string) => {
+    return location.pathname === path;
+  };
+
   return (
-    <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+    <header className="sticky top-0 z-50 w-full border-b border-border/20 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container flex h-16 items-center justify-between">
         <div className="flex items-center">
           <Link to="/" className="text-xl font-bold text-foreground">
@@ -43,17 +48,17 @@ const Header: React.FC = () => {
         </div>
 
         {/* Desktop navigation */}
-        <nav className="hidden md:flex items-center space-x-6">
-          <Link to="/" className="nav-link active-nav-link">
+        <nav className="hidden md:flex items-center space-x-8">
+          <Link to="/" className={`nav-link ${isActive('/') ? 'active-nav-link' : ''}`}>
             Inicio
           </Link>
-          <Link to="/proyectos" className="nav-link">
+          <Link to="/proyectos" className={`nav-link ${isActive('/proyectos') ? 'active-nav-link' : ''}`}>
             Proyectos
           </Link>
-          <Link to="/sobre-mi" className="nav-link">
+          <Link to="/sobre-mi" className={`nav-link ${isActive('/sobre-mi') ? 'active-nav-link' : ''}`}>
             Sobre Mí
           </Link>
-          <Link to="/contacto" className="nav-link">
+          <Link to="/contacto" className={`nav-link ${isActive('/contacto') ? 'active-nav-link' : ''}`}>
             Contacto
           </Link>
           <Button
