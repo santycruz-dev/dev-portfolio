@@ -36,9 +36,15 @@ const Contact: React.FC = () => {
   };
 
   return (
-    <section className="py-6 md:py-10">
-      <div className="mx-auto">
-        <h2 className="text-3xl font-bold mb-8">Contacto</h2>
+    <section className="py-16 md:py-24 relative z-10">
+      <div className="container">
+        <div className="max-w-3xl mb-16 animate-fade-in">
+          <h2 className="text-3xl font-bold">Contacto</h2>
+          <div className="w-24 h-px bg-primary mb-6"></div>
+          <p className="text-xl text-muted-foreground">
+            ¿Tienes un proyecto en mente o quieres hablar sobre oportunidades de colaboración?
+          </p>
+        </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
           <div className="space-y-8 animate-fade-in animate-slide-in">
