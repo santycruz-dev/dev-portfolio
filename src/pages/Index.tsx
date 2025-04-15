@@ -1,4 +1,3 @@
-
 import React from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -17,30 +16,75 @@ const Index = () => {
     <div className="min-h-screen flex flex-col">
       <Header />
       
-      {/* Hero section */}
-      <section className="py-16 md:py-24 relative">
-        <div className="container">
-          <div className="max-w-4xl space-y-6 animate-fade-in animate-slide-up">
+      {/* Hero section - Updated with more vibrant design */}
+      <section className="py-16 md:py-24 relative overflow-hidden bg-gradient-to-br from-background via-background to-secondary/30">
+        {/* Decorative elements */}
+        <div className="absolute inset-0 overflow-hidden">
+          <div className="absolute -top-10 -right-10 w-64 h-64 bg-primary/5 rounded-full blur-3xl"></div>
+          <div className="absolute top-40 -left-20 w-72 h-72 bg-accent/5 rounded-full blur-3xl"></div>
+          <div className="absolute -bottom-20 right-1/4 w-56 h-56 bg-primary/5 rounded-full blur-3xl"></div>
+          
+          {/* Grid pattern */}
+          <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(255,255,255,0.05)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.05)_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_80%_50%_at_50%_0%,#000_70%,transparent_110%)]"></div>
+        </div>
+
+        <div className="container relative z-10">
+          <div className="max-w-4xl space-y-8 animate-fade-in animate-slide-up">
+            <div className="inline-block">
+              <span className="px-3 py-1 text-xs font-semibold tracking-wider uppercase border border-primary/30 rounded-full bg-primary/10 text-primary mb-4">
+                Web3 Innovation
+              </span>
+            </div>
+            
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight leading-tight">
-              Enhancing <span className="text-primary">New</span> Web3 Experience
+              Enhancing <span className="text-gradient bg-gradient-to-r from-primary via-accent to-primary">New</span> Web3 Experience
             </h1>
-            <p className="text-xl text-muted-foreground max-w-2xl">
+            
+            <p className="text-xl text-muted-foreground max-w-2xl relative">
               Construyo experiencias web modernas, accesibles y de alto rendimiento
               que conectan con los usuarios y resuelven problemas reales.
+              <span className="absolute -left-6 top-0 h-full w-1 bg-primary/50 rounded-full"></span>
             </p>
+            
             <div className="flex flex-wrap gap-4 pt-6">
-              <Button size="lg" className="futuristic-button group">
-                <Link to="/proyectos" className="flex items-center">
+              <Button size="lg" className="group relative overflow-hidden bg-gradient-to-r from-primary to-accent hover:from-primary/90 hover:to-accent/90 transition-all duration-300">
+                <Link to="/proyectos" className="flex items-center z-10 relative">
                   Ver proyectos
                   <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
                 </Link>
+                <span className="absolute inset-0 w-full h-full bg-white/10 transform translate-y-full group-hover:translate-y-0 transition-transform duration-300"></span>
               </Button>
+              
+              <Button size="lg" variant="outline" className="border-primary/20 hover:border-primary group">
+                <Link to="/contacto" className="flex items-center">
+                  Contactar
+                  <ArrowRight className="ml-2 h-5 w-5 opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all" />
+                </Link>
+              </Button>
+            </div>
+            
+            {/* Stats or highlights */}
+            <div className="grid grid-cols-2 md:grid-cols-3 gap-4 mt-10 pt-6 border-t border-border/40">
+              <div>
+                <div className="text-3xl font-bold text-primary">+50</div>
+                <div className="text-sm text-muted-foreground">Proyectos completados</div>
+              </div>
+              <div>
+                <div className="text-3xl font-bold text-primary">+5</div>
+                <div className="text-sm text-muted-foreground">Años de experiencia</div>
+              </div>
+              <div>
+                <div className="text-3xl font-bold text-primary">100%</div>
+                <div className="text-sm text-muted-foreground">Clientes satisfechos</div>
+              </div>
             </div>
           </div>
         </div>
 
-        <div className="hidden md:block absolute top-1/3 right-10 w-64 h-64 border border-primary/20 rounded-full opacity-20"></div>
-        <div className="hidden md:block absolute top-1/2 right-32 w-32 h-32 border border-accent/20 rounded-full opacity-10"></div>
+        {/* Decorative circles */}
+        <div className="hidden md:block absolute bottom-10 right-10 w-64 h-64 border border-primary/20 rounded-full opacity-30 animate-pulse-slow"></div>
+        <div className="hidden md:block absolute top-1/3 right-32 w-32 h-32 border border-accent/20 rounded-full opacity-20 animate-pulse-slow" style={{ animationDelay: "1s" }}></div>
+        <div className="hidden md:block absolute bottom-20 left-10 w-40 h-40 border border-primary/30 rounded-full opacity-10 animate-pulse-slow" style={{ animationDelay: "1.5s" }}></div>
       </section>
 
       {/* Features section */}
