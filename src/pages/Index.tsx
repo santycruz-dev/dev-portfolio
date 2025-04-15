@@ -91,130 +91,21 @@ const Index = () => {
           <div className="absolute top-20 right-40 w-72 h-72 bg-primary/5 rounded-full blur-3xl"></div>
           <div className="absolute bottom-10 left-20 w-64 h-64 bg-accent/5 rounded-full blur-3xl"></div>
           
-          <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(255,255,255,0.03)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.03)_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)]"></div>
         </div>
 
         <div className="container relative z-10">
           <div className="mb-16 max-w-2xl mx-auto text-center">
             <div className="inline-block mb-4">
               <span className="px-3 py-1 text-xs font-semibold tracking-wider uppercase border border-primary/30 rounded-full bg-primary/10 text-primary">
-                Características Destacadas
+                Featured Projects
               </span>
             </div>
-            <h2 className="text-4xl font-bold mb-4">Experiencia web moderna con <span className="text-gradient">tecnología avanzada</span></h2>
-            <p className="text-muted-foreground">Soluciones tecnológicas diseñadas para un mundo digital en constante evolución</p>
+            <h2 className="text-4xl font-bold mb-4">Modern web experiences with <span className="text-gradient">advanced technology</span></h2>
+            <p className="text-muted-foreground">Innovative digital solutions designed for an ever-evolving technological landscape</p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="feature-card group">
-              <div className="feature-icon-wrapper bg-primary/10 group-hover:bg-primary/20">
-                <Shield className="feature-icon" />
-              </div>
-              <h3 className="text-xl font-semibold mb-2 group-hover:text-primary transition-colors">Reliable, <span className="text-muted-foreground">tamper-proof network</span></h3>
-              <p className="text-muted-foreground">
-                Interfaces limpias, elegantes y altamente usables que priorizan la experiencia de usuario.
-                Diseño optimizado para diferentes dispositivos y plataformas.
-              </p>
-              <div className="mt-4 opacity-0 group-hover:opacity-100 transition-opacity">
-                <Link to="#" className="text-primary text-sm flex items-center gap-1 hover:gap-2 transition-all">
-                  Leer más <ArrowRight className="h-3 w-3" />
-                </Link>
-              </div>
-            </div>
-            
-            <div className="feature-card group">
-              <div className="feature-icon-wrapper bg-accent/10 group-hover:bg-accent/20">
-                <Database className="feature-icon" />
-              </div>
-              <h3 className="text-xl font-semibold mb-2 group-hover:text-accent transition-colors">Seamless <span className="text-muted-foreground">connection to any API</span></h3>
-              <p className="text-muted-foreground">
-                Desarrollo estructurado, mantenible y siguiendo las mejores prácticas actuales.
-                Integración con APIs externas y servicios de terceros.
-              </p>
-              <div className="mt-4 opacity-0 group-hover:opacity-100 transition-opacity">
-                <Link to="#" className="text-accent text-sm flex items-center gap-1 hover:gap-2 transition-all">
-                  Leer más <ArrowRight className="h-3 w-3" />
-                </Link>
-              </div>
-            </div>
-            
-            <div className="feature-card group">
-              <div className="feature-icon-wrapper bg-primary/10 group-hover:bg-primary/20">
-                <Workflow className="feature-icon" />
-              </div>
-              <h3 className="text-xl font-semibold mb-2 group-hover:text-primary transition-colors">Proven, <span className="text-muted-foreground">ready-made solutions</span></h3>
-              <p className="text-muted-foreground">
-                Aplicaciones optimizadas que cargan rápidamente y funcionan con fluidez en cualquier dispositivo.
-                Soluciones escalables y adaptables a diferentes necesidades.
-              </p>
-              <div className="mt-4 opacity-0 group-hover:opacity-100 transition-opacity">
-                <Link to="#" className="text-primary text-sm flex items-center gap-1 hover:gap-2 transition-all">
-                  Leer más <ArrowRight className="h-3 w-3" />
-                </Link>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div className="hidden md:block absolute -bottom-20 right-10 w-40 h-40 border border-primary/20 rounded-full opacity-20 animate-pulse-slow"></div>
-        <div className="hidden md:block absolute top-40 left-10 w-20 h-20 border border-accent/20 rounded-full opacity-10 animate-pulse-slow" style={{ animationDelay: "1.2s" }}></div>
-      </section>
-
-      {/* Code example section */}
-      <section className="py-16 bg-gradient-to-b from-secondary to-background">
-        <div className="container">
-          <div className="mb-10">
-            <h2 className="text-3xl font-bold">
-              Integrate services<br />
-              <span className="text-gradient">into your dApp</span>
-            </h2>
-          </div>
           
-          <div className="max-w-3xl mx-auto">
-            <div className="rounded-md overflow-hidden border border-border/50 bg-black">
-              <div className="flex items-center justify-between bg-secondary p-2">
-                <div className="flex space-x-1.5">
-                  <div className="w-3 h-3 bg-red-500 rounded-full"></div>
-                  <div className="w-3 h-3 bg-yellow-500 rounded-full"></div>
-                  <div className="w-3 h-3 bg-green-500 rounded-full"></div>
-                </div>
-              </div>
-              <pre className="p-4 overflow-x-auto">
-                <code className="text-green-400 font-mono">
-{`import { Web3Experience } from '@web3-experience/core';
-
-const App = () => {
-  return (
-    <Web3Experience
-      apiKey="YOUR_API_KEY"
-      theme="dark"
-      features={['wallet', 'transactions', 'nfts']}
-    >
-      <YourAppContent />
-    </Web3Experience>
-  );
-};`}
-                </code>
-              </pre>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Projects preview section */}
-      <section className="py-16 bg-gradient-to-b from-background to-secondary/5">
-        <div className="container">
-          <div className="flex justify-between items-center mb-14">
-            <h2 className="section-title">Proyectos destacados</h2>
-            <Link 
-              to="/proyectos" 
-              className="text-primary hover:text-primary/80 transition-colors flex items-center gap-1"
-            >
-              Ver todos <ExternalLink className="h-4 w-4" />
-            </Link>
-          </div>
-          
-          <div className="pb-10">
+           <div className="pb-10">
             <Carousel className="w-full">
               <CarouselContent className="-ml-4">
                 {projects.slice(0, 5).map((project, index) => (
@@ -234,97 +125,120 @@ const App = () => {
             </Carousel>
           </div>
         </div>
+
+        <div className="hidden md:block absolute -bottom-20 right-10 w-40 h-40 border border-primary/20 rounded-full opacity-20 animate-pulse-slow"></div>
+        <div className="hidden md:block absolute top-40 left-10 w-20 h-20 border border-accent/20 rounded-full opacity-10 animate-pulse-slow" style={{ animationDelay: "1.2s" }}></div>
       </section>
 
-      {/* Program boxes section */}
+      {/* Services section */}
       <section className="py-16 bg-gradient-to-b from-background to-secondary/40">
         <div className="container">
           <div className="mb-10">
             <h2 className="text-3xl font-bold">
-              Get involved <br/>
-              <span className="text-primary">through our grant</span> Programs
+              Specialized <br/>
+              <span className="text-primary">development services</span> & expertise
             </h2>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div className="border border-border/40 bg-card p-6 rounded-md">
-              <h3 className="text-lg font-semibold mb-4">Community grant program</h3>
+              <div className="flex items-center gap-3 mb-4">
+                <Code className="h-5 w-5 text-primary" />
+                <h3 className="text-lg font-semibold">Frontend Development</h3>
+              </div>
               <p className="text-muted-foreground mb-6">
-                Participa en nuestros programas de desarrollo comunitario y obtén financiamiento para tus proyectos innovadores.
+                Creating responsive, accessible, and performant user interfaces with modern frameworks like React, Next.js, and TypeScript.
               </p>
-              <Link to="#" className="text-primary text-sm hover:underline">Leer más</Link>
+              <Link to="/services" className="text-primary text-sm hover:underline">Learn more</Link>
             </div>
             
             <div className="border border-border/40 bg-card p-6 rounded-md">
-              <h3 className="text-lg font-semibold mb-4">Integration grants program</h3>
+              <div className="flex items-center gap-3 mb-4">
+                <Database className="h-5 w-5 text-primary" />
+                <h3 className="text-lg font-semibold">Web3 Integration</h3>
+              </div>
               <p className="text-muted-foreground mb-6">
-                Descubre oportunidades para integrar nuevas tecnologías en tus proyectos existentes con nuestro programa de ayudas.
+                Implementing blockchain solutions, smart contract integration, and decentralized applications with Ethereum, Solana, and more.
               </p>
-              <Link to="#" className="text-primary text-sm hover:underline">Leer más</Link>
+              <Link to="/services" className="text-primary text-sm hover:underline">Learn more</Link>
             </div>
             
             <div className="border border-border/40 bg-card p-6 rounded-md">
-              <h3 className="text-lg font-semibold mb-4">Social impact program</h3>
+              <div className="flex items-center gap-3 mb-4">
+                <Layout className="h-5 w-5 text-primary" />
+                <h3 className="text-lg font-semibold">UI/UX Design</h3>
+              </div>
               <p className="text-muted-foreground mb-6">
-                Crea aplicaciones que generen un impacto social positivo con el apoyo de nuestro programa especializado.
+                Designing intuitive user experiences and visually appealing interfaces that enhance user engagement and satisfaction.
               </p>
-              <Link to="#" className="text-primary text-sm hover:underline">Leer más</Link>
+              <Link to="/services" className="text-primary text-sm hover:underline">Learn more</Link>
             </div>
             
             <div className="border border-border/40 bg-card p-6 rounded-md">
-              <h3 className="text-lg font-semibold mb-4">Easy research program</h3>
+              <div className="flex items-center gap-3 mb-4">
+                <Shield className="h-5 w-5 text-primary" />
+                <h3 className="text-lg font-semibold">Performance Optimization</h3>
+              </div>
               <p className="text-muted-foreground mb-6">
-                Colabora con equipos de investigación y desarrollo para explorar nuevas posibilidades tecnológicas.
+                Improving application speed, responsiveness, and overall performance through advanced optimization techniques.
               </p>
-              <Link to="#" className="text-primary text-sm hover:underline">Leer más</Link>
+              <Link to="/services" className="text-primary text-sm hover:underline">Learn more</Link>
             </div>
           </div>
         </div>
       </section>
 
-      {/* News section */}
+          {/* Bio section */}
+          <Bio />
+
+
+      {/* Testimonials section */}
       <section className="py-16">
         <div className="container">
           <div className="mb-10">
             <h2 className="text-3xl font-bold">
-              Our latest<br/>
-              <span className="text-primary">news today</span>
+              Client <br/>
+              <span className="text-primary">testimonials</span>
             </h2>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div className="border border-border/40 bg-card p-6 rounded-md flex flex-col md:flex-row gap-4 items-start">
               <div className="flex-shrink-0">
-                <div className="number-indicator">01</div>
+                <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
+                  <span className="text-primary text-xl font-bold">"</span>
+                </div>
               </div>
               <div>
-                <h3 className="text-lg font-semibold mb-2">Lanzamiento de nueva plataforma</h3>
-                <p className="text-muted-foreground mb-4">
-                  Hemos lanzado nuestra nueva plataforma con características mejoradas y un rendimiento optimizado.
+                <p className="text-muted-foreground mb-4 italic">
+                  "The web application developed exceeded our expectations. The attention to detail and performance optimization made a significant difference in our user engagement metrics."
                 </p>
-                <p className="text-xs text-muted-foreground/70">Junio 15, 2023</p>
+                <h3 className="text-lg font-semibold mb-1">Sarah Johnson</h3>
+                <p className="text-xs text-muted-foreground/70">CTO, TechVision Inc.</p>
               </div>
             </div>
             
             <div className="border border-border/40 bg-card p-6 rounded-md flex flex-col md:flex-row gap-4 items-start">
               <div className="flex-shrink-0">
-                <div className="number-indicator">02</div>
+                <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
+                  <span className="text-primary text-xl font-bold">"</span>
+                </div>
               </div>
               <div>
-                <h3 className="text-lg font-semibold mb-2">Colaboración con nuevos partners</h3>
-                <p className="text-muted-foreground mb-4">
-                  Estamos emocionados de anunciar nuevas colaboraciones estratégicas con empresas líderes del sector.
+                <p className="text-muted-foreground mb-4 italic">
+                  "Working with this developer was a seamless experience. Their expertise in Web3 technologies helped us launch our dApp ahead of schedule with all the features we needed."
                 </p>
-                <p className="text-xs text-muted-foreground/70">Mayo 28, 2023</p>
+                <h3 className="text-lg font-semibold mb-1">Michael Chen</h3>
+                <p className="text-xs text-muted-foreground/70">Founder, BlockChain Solutions</p>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Bio section */}
-      <Bio />
+  
 
+  
       {/* Contact section */}
       <Contact />
 
