@@ -6,7 +6,7 @@ import Bio from "@/components/Bio";
 import Contact from "@/components/Contact";
 import { projects } from "@/data/projects";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Code, ExternalLink, Layout, Terminal, Zap } from "lucide-react";
+import { ArrowRight, Code, ExternalLink, Layout, Terminal, Zap, Shield, Database, Workflow } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import { Card, CardContent } from "@/components/ui/card";
@@ -16,7 +16,7 @@ const Index = () => {
     <div className="min-h-screen flex flex-col">
       <Header />
       
-      {/* Hero section - Updated with more vibrant design */}
+      {/* Hero section */}
       <section className="py-16 md:py-24 relative overflow-hidden bg-gradient-to-br from-background via-background to-secondary/30">
         {/* Decorative elements */}
         <div className="absolute inset-0 overflow-hidden">
@@ -63,7 +63,6 @@ const Index = () => {
               </Button>
             </div>
             
-            {/* Stats or highlights */}
             <div className="grid grid-cols-2 md:grid-cols-3 gap-4 mt-10 pt-6 border-t border-border/40">
               <div>
                 <div className="text-3xl font-bold text-primary">+50</div>
@@ -81,50 +80,84 @@ const Index = () => {
           </div>
         </div>
 
-        {/* Decorative circles */}
         <div className="hidden md:block absolute bottom-10 right-10 w-64 h-64 border border-primary/20 rounded-full opacity-30 animate-pulse-slow"></div>
         <div className="hidden md:block absolute top-1/3 right-32 w-32 h-32 border border-accent/20 rounded-full opacity-20 animate-pulse-slow" style={{ animationDelay: "1s" }}></div>
         <div className="hidden md:block absolute bottom-20 left-10 w-40 h-40 border border-primary/30 rounded-full opacity-10 animate-pulse-slow" style={{ animationDelay: "1.5s" }}></div>
       </section>
 
       {/* Features section */}
-      <section className="py-16">
-        <div className="container">
-          <div className="space-y-16">
-            <div className="flex items-start gap-4">
-              <div className="number-indicator">1</div>
-              <div>
-                <h3 className="text-xl font-semibold mb-2">Reliable, <span className="text-muted-foreground">tamper-proof network</span></h3>
-                <p className="text-muted-foreground max-w-2xl">
-                  Interfaces limpias, elegantes y altamente usables que priorizan la experiencia de usuario.
-                  Diseño optimizado para diferentes dispositivos y plataformas.
-                </p>
+      <section className="py-20 relative overflow-hidden bg-gradient-to-br from-background via-background to-secondary/20">
+        <div className="absolute inset-0 overflow-hidden">
+          <div className="absolute top-20 right-40 w-72 h-72 bg-primary/5 rounded-full blur-3xl"></div>
+          <div className="absolute bottom-10 left-20 w-64 h-64 bg-accent/5 rounded-full blur-3xl"></div>
+          
+          <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(255,255,255,0.03)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.03)_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)]"></div>
+        </div>
+
+        <div className="container relative z-10">
+          <div className="mb-16 max-w-2xl mx-auto text-center">
+            <div className="inline-block mb-4">
+              <span className="px-3 py-1 text-xs font-semibold tracking-wider uppercase border border-primary/30 rounded-full bg-primary/10 text-primary">
+                Características Destacadas
+              </span>
+            </div>
+            <h2 className="text-4xl font-bold mb-4">Experiencia web moderna con <span className="text-gradient">tecnología avanzada</span></h2>
+            <p className="text-muted-foreground">Soluciones tecnológicas diseñadas para un mundo digital en constante evolución</p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="feature-card group">
+              <div className="feature-icon-wrapper bg-primary/10 group-hover:bg-primary/20">
+                <Shield className="feature-icon" />
+              </div>
+              <h3 className="text-xl font-semibold mb-2 group-hover:text-primary transition-colors">Reliable, <span className="text-muted-foreground">tamper-proof network</span></h3>
+              <p className="text-muted-foreground">
+                Interfaces limpias, elegantes y altamente usables que priorizan la experiencia de usuario.
+                Diseño optimizado para diferentes dispositivos y plataformas.
+              </p>
+              <div className="mt-4 opacity-0 group-hover:opacity-100 transition-opacity">
+                <Link to="#" className="text-primary text-sm flex items-center gap-1 hover:gap-2 transition-all">
+                  Leer más <ArrowRight className="h-3 w-3" />
+                </Link>
               </div>
             </div>
             
-            <div className="flex items-start gap-4">
-              <div className="number-indicator">2</div>
-              <div>
-                <h3 className="text-xl font-semibold mb-2">Seamless <span className="text-muted-foreground">connection to any API</span></h3>
-                <p className="text-muted-foreground max-w-2xl">
-                  Desarrollo estructurado, mantenible y siguiendo las mejores prácticas actuales.
-                  Integración con APIs externas y servicios de terceros.
-                </p>
+            <div className="feature-card group">
+              <div className="feature-icon-wrapper bg-accent/10 group-hover:bg-accent/20">
+                <Database className="feature-icon" />
+              </div>
+              <h3 className="text-xl font-semibold mb-2 group-hover:text-accent transition-colors">Seamless <span className="text-muted-foreground">connection to any API</span></h3>
+              <p className="text-muted-foreground">
+                Desarrollo estructurado, mantenible y siguiendo las mejores prácticas actuales.
+                Integración con APIs externas y servicios de terceros.
+              </p>
+              <div className="mt-4 opacity-0 group-hover:opacity-100 transition-opacity">
+                <Link to="#" className="text-accent text-sm flex items-center gap-1 hover:gap-2 transition-all">
+                  Leer más <ArrowRight className="h-3 w-3" />
+                </Link>
               </div>
             </div>
             
-            <div className="flex items-start gap-4">
-              <div className="number-indicator">3</div>
-              <div>
-                <h3 className="text-xl font-semibold mb-2">Proven, <span className="text-muted-foreground">ready-made solutions</span></h3>
-                <p className="text-muted-foreground max-w-2xl">
-                  Aplicaciones optimizadas que cargan rápidamente y funcionan con fluidez en cualquier dispositivo.
-                  Soluciones escalables y adaptables a diferentes necesidades.
-                </p>
+            <div className="feature-card group">
+              <div className="feature-icon-wrapper bg-primary/10 group-hover:bg-primary/20">
+                <Workflow className="feature-icon" />
+              </div>
+              <h3 className="text-xl font-semibold mb-2 group-hover:text-primary transition-colors">Proven, <span className="text-muted-foreground">ready-made solutions</span></h3>
+              <p className="text-muted-foreground">
+                Aplicaciones optimizadas que cargan rápidamente y funcionan con fluidez en cualquier dispositivo.
+                Soluciones escalables y adaptables a diferentes necesidades.
+              </p>
+              <div className="mt-4 opacity-0 group-hover:opacity-100 transition-opacity">
+                <Link to="#" className="text-primary text-sm flex items-center gap-1 hover:gap-2 transition-all">
+                  Leer más <ArrowRight className="h-3 w-3" />
+                </Link>
               </div>
             </div>
           </div>
         </div>
+
+        <div className="hidden md:block absolute -bottom-20 right-10 w-40 h-40 border border-primary/20 rounded-full opacity-20 animate-pulse-slow"></div>
+        <div className="hidden md:block absolute top-40 left-10 w-20 h-20 border border-accent/20 rounded-full opacity-10 animate-pulse-slow" style={{ animationDelay: "1.2s" }}></div>
       </section>
 
       {/* Code example section */}
