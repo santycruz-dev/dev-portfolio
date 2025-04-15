@@ -2,6 +2,7 @@
 import React from "react";
 import { Button } from "@/components/ui/button";
 import { FileDown } from "lucide-react";
+import { ScrollArea } from "@/components/ui/scroll-area";
 
 const Bio: React.FC = () => {
   return (
@@ -72,20 +73,40 @@ const Bio: React.FC = () => {
 
             <div>
               <h3 className="text-xl font-semibold mb-3">Experiencia</h3>
-              <ul className="space-y-6">
-                <li className="relative border-l border-muted pl-6 pb-2">
-                  <div className="absolute -left-1.5 mt-1.5 h-3 w-3 rounded-full border border-background bg-primary"></div>
-                  <h4 className="font-semibold">Desarrollador Frontend Senior</h4>
-                  <p className="text-sm text-muted-foreground">Empresa XYZ · 2020 - Presente</p>
-                  <p className="text-sm mt-1">Desarrollo de aplicaciones web con React y Next.js, implementación de arquitectura frontend y optimización de rendimiento.</p>
-                </li>
-                <li className="relative border-l border-muted pl-6 pb-2">
-                  <div className="absolute -left-1.5 mt-1.5 h-3 w-3 rounded-full border border-background bg-primary"></div>
-                  <h4 className="font-semibold">Desarrollador Frontend</h4>
-                  <p className="text-sm text-muted-foreground">Empresa ABC · 2018 - 2020</p>
-                  <p className="text-sm mt-1">Desarrollo de interfaces de usuario con Vue.js, integración de APIs y mejoras de accesibilidad.</p>
-                </li>
-              </ul>
+              <ScrollArea className="h-[300px] pr-4 border-r border-border/30">
+                <ul className="space-y-6">
+                  <li className="relative border-l border-muted pl-6 pb-2">
+                    <div className="absolute -left-1.5 mt-1.5 h-3 w-3 rounded-full border border-background bg-primary"></div>
+                    <h4 className="font-semibold">Desarrollador Frontend Senior</h4>
+                    <p className="text-sm text-muted-foreground">Empresa XYZ · 2020 - Presente</p>
+                    <p className="text-sm mt-1">Desarrollo de aplicaciones web con React y Next.js, implementación de arquitectura frontend y optimización de rendimiento.</p>
+                  </li>
+                  <li className="relative border-l border-muted pl-6 pb-2">
+                    <div className="absolute -left-1.5 mt-1.5 h-3 w-3 rounded-full border border-background bg-primary"></div>
+                    <h4 className="font-semibold">Desarrollador Frontend</h4>
+                    <p className="text-sm text-muted-foreground">Empresa ABC · 2018 - 2020</p>
+                    <p className="text-sm mt-1">Desarrollo de interfaces de usuario con Vue.js, integración de APIs y mejoras de accesibilidad.</p>
+                  </li>
+                  <li className="relative border-l border-muted pl-6 pb-2">
+                    <div className="absolute -left-1.5 mt-1.5 h-3 w-3 rounded-full border border-background bg-primary"></div>
+                    <h4 className="font-semibold">Desarrollador Web</h4>
+                    <p className="text-sm text-muted-foreground">Startup DEF · 2016 - 2018</p>
+                    <p className="text-sm mt-1">Desarrollo de sitios web responsivos, implementación de diseños UI/UX y optimización de velocidad de carga.</p>
+                  </li>
+                  <li className="relative border-l border-muted pl-6 pb-2">
+                    <div className="absolute -left-1.5 mt-1.5 h-3 w-3 rounded-full border border-background bg-primary"></div>
+                    <h4 className="font-semibold">Desarrollador Frontend Junior</h4>
+                    <p className="text-sm text-muted-foreground">Agencia GHI · 2014 - 2016</p>
+                    <p className="text-sm mt-1">Implementación de diseños web, desarrollo con HTML5, CSS3 y JavaScript, creación de componentes interactivos.</p>
+                  </li>
+                  <li className="relative border-l border-muted pl-6 pb-2">
+                    <div className="absolute -left-1.5 mt-1.5 h-3 w-3 rounded-full border border-background bg-primary"></div>
+                    <h4 className="font-semibold">Pasante de Desarrollo Web</h4>
+                    <p className="text-sm text-muted-foreground">Empresa JKL · 2013 - 2014</p>
+                    <p className="text-sm mt-1">Asistencia en el desarrollo de sitios web corporativos, mantenimiento de contenido y soporte técnico.</p>
+                  </li>
+                </ul>
+              </ScrollArea>
             </div>
           </div>
         </div>
