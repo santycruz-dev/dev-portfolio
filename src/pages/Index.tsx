@@ -9,6 +9,8 @@ import { projects } from "@/data/projects";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Code, ExternalLink, Layout, Terminal, Zap } from "lucide-react";
 import { Link } from "react-router-dom";
+import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
+import { Card, CardContent } from "@/components/ui/card";
 
 const Index = () => {
   return (
@@ -123,7 +125,7 @@ const App = () => {
       </section>
 
       {/* Projects preview section */}
-      <section className="py-16">
+      <section className="py-16 bg-gradient-to-b from-background to-secondary/5">
         <div className="container">
           <div className="flex justify-between items-center mb-14">
             <h2 className="section-title">Proyectos destacados</h2>
@@ -135,10 +137,24 @@ const App = () => {
             </Link>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {projects.slice(0, 2).map((project, index) => (
-              <ProjectCard key={index} project={project} />
-            ))}
+          <div className="pb-10">
+            <Carousel className="w-full">
+              <CarouselContent className="-ml-4">
+                {projects.slice(0, 5).map((project, index) => (
+                  <CarouselItem key={index} className="pl-4 md:basis-1/2 lg:basis-1/3">
+                    <Card className="border-none bg-transparent">
+                      <CardContent className="p-0">
+                        <ProjectCard project={project} isPreview={true} />
+                      </CardContent>
+                    </Card>
+                  </CarouselItem>
+                ))}
+              </CarouselContent>
+              <div className="flex justify-end gap-2 mt-6">
+                <CarouselPrevious className="static translate-y-0 ml-auto" />
+                <CarouselNext className="static translate-y-0" />
+              </div>
+            </Carousel>
           </div>
         </div>
       </section>

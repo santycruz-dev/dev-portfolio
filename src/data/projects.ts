@@ -53,4 +53,38 @@ export const projects: ProjectProps[] = [
       "Notificaciones personalizables"
     ],
   },
+  {
+    title: "App móvil con React Native",
+    summary: "Aplicación móvil multiplataforma para seguimiento de fitness y nutrición con seguimiento GPS y análisis de progreso.",
+    imageUrl: "https://images.unsplash.com/photo-1581090464777-f3220bbe1b8b",
+    objective: "Diseñar una aplicación móvil que permita a los usuarios hacer seguimiento de su actividad física y nutrición con una experiencia fluida en iOS y Android.",
+    technologies: ["React Native", "Expo", "Redux Toolkit", "Firebase", "Maps API"],
+    challenges: "Integrar el seguimiento GPS con bajo consumo de batería y mantener la sincronización de datos entre dispositivos fueron los principales desafíos técnicos.",
+    results: "La aplicación alcanzó 50,000 descargas en los primeros 3 meses, con una calificación promedio de 4.7 estrellas en ambas tiendas de aplicaciones.",
+    repoUrl: "https://github.com/username/fitness-tracker-app",
+    demoUrl: "https://fitness-app.demo",
+    features: [
+      "Seguimiento GPS de actividades en tiempo real",
+      "Análisis personalizado de nutrición",
+      "Sincronización entre dispositivos",
+      "Modo offline con sincronización posterior"
+    ],
+  },
+  {
+    title: "Plataforma educativa con Microservicios",
+    summary: "Sistema de gestión de aprendizaje con arquitectura de microservicios, enfocado en escalabilidad y experiencia de usuario.",
+    imageUrl: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f",
+    objective: "Crear una plataforma educativa completa que permita a instituciones gestionar cursos, estudiantes y contenido educativo de manera eficiente.",
+    technologies: ["Node.js", "Express", "MongoDB", "Docker", "Kubernetes", "React"],
+    challenges: "Diseñar una arquitectura de microservicios que mantuviera alta disponibilidad y consistencia de datos mientras soportaba picos de tráfico durante exámenes.",
+    results: "La plataforma actualmente soporta más de 50,000 estudiantes y 2,000 educadores, con un tiempo de actividad del 99.9% y tiempos de respuesta por debajo de 200ms.",
+    repoUrl: "https://github.com/username/learning-platform",
+    demoUrl: "https://edu-platform.demo",
+    features: [
+      "Sistema de videoconferencias integrado",
+      "Evaluaciones automatizadas",
+      "Panel de analíticas para educadores",
+      "Sistema de recomendación de contenido personalizado"
+    ],
+  },
 ];

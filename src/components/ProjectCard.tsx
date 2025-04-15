@@ -1,7 +1,8 @@
 
 import React from "react";
-import { ExternalLink, Github } from "lucide-react";
+import { ExternalLink, Github, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 
 export interface ProjectProps {
   title: string;
@@ -18,9 +19,10 @@ export interface ProjectProps {
 
 interface ProjectCardProps {
   project: ProjectProps;
+  isPreview?: boolean;
 }
 
-const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
+const ProjectCard: React.FC<ProjectCardProps> = ({ project, isPreview = false }) => {
   const {
     title,
     summary,
@@ -33,6 +35,45 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
     demoUrl,
     features,
   } = project;
+
+  if (isPreview) {
+    return (
+      <div className="project-card h-full flex flex-col animate-fade-in animate-slide-up" style={{ animationDelay: "100ms" }}>
+        <h3 className="text-xl font-bold mb-2">{title}</h3>
+        <p className="text-muted-foreground mb-4 text-sm">{summary}</p>
+
+        <div className="relative mb-4 overflow-hidden rounded-lg border border-border">
+          <img 
+            src={imageUrl} 
+            alt={`${title} screenshot`}
+            className="w-full h-40 object-cover transition-transform duration-700 hover:scale-105" 
+          />
+        </div>
+
+        <div className="mb-3">
+          <div className="flex flex-wrap gap-2">
+            {technologies.slice(0, 3).map((tech, index) => (
+              <span key={index} className="tech-badge text-xs">
+                {tech}
+              </span>
+            ))}
+            {technologies.length > 3 && (
+              <span className="tech-badge text-xs">+{technologies.length - 3}</span>
+            )}
+          </div>
+        </div>
+
+        <div className="mt-auto flex justify-end">
+          <Link 
+            to="/proyectos" 
+            className="text-primary hover:text-primary/80 transition-colors text-sm flex items-center gap-1"
+          >
+            Ver detalles <ArrowRight className="h-3 w-3" />
+          </Link>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div className="project-card animate-fade-in animate-slide-up" style={{ animationDelay: "100ms" }}>
