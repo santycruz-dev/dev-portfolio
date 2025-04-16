@@ -1,4 +1,3 @@
-
 import React from "react";
 import { Github, Linkedin, Mail } from "lucide-react";
 
@@ -6,44 +5,54 @@ const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="border-t border-border/40 bg-background">
+    <footer className="border-t border-border/40 bg-background relative overflow-hidden">
+      {/* Decorative luminosity circle */}
+      <div 
+        className="hidden md:block absolute bottom-16 right-16 w-[30rem] h-[30rem] rounded-full"
+        style={{
+          background: 'radial-gradient(circle, rgba(255,152,0,0.1) 0%, rgba(0,0,0,0) 85%)',
+          filter: 'blur(25px)',
+          opacity: '0.6',
+          animation: 'pulse-glow 8s ease-in-out infinite'
+        }}
+      />
       <div className="container py-8">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div className="space-y-3">
             <h3 className="text-lg font-bold">DevPortfolio</h3>
             <p className="text-sm text-muted-foreground">
-              Portafolio profesional de desarrollo frontend, con enfoque en tecnologías modernas y diseño de experiencias de usuario excepcionales.
+              Professional frontend development portfolio, focused on modern technologies and exceptional user experience design.
             </p>
           </div>
 
           <div className="space-y-3">
-            <h3 className="text-lg font-bold">Enlaces</h3>
+            <h3 className="text-lg font-bold">Links</h3>
             <ul className="space-y-2">
               <li>
                 <a href="/" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
-                  Inicio
+                  Home
                 </a>
               </li>
               <li>
                 <a href="/proyectos" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
-                  Proyectos
+                  Projects
                 </a>
               </li>
               <li>
                 <a href="/sobre-mi" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
-                  Sobre Mí
+                  About Me
                 </a>
               </li>
               <li>
                 <a href="/contacto" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
-                  Contacto
+                  Contact
                 </a>
               </li>
             </ul>
           </div>
 
           <div className="space-y-3">
-            <h3 className="text-lg font-bold">Contacto</h3>
+            <h3 className="text-lg font-bold">Contact</h3>
             <div className="flex space-x-3">
               <a
                 href="https://github.com/username"
@@ -79,7 +88,7 @@ const Footer: React.FC = () => {
 
         <div className="mt-8 border-t border-border pt-6 text-center">
           <p className="text-sm text-muted-foreground">
-            © {currentYear} DevPortfolio. Todos los derechos reservados.
+            {currentYear} DevPortfolio. All rights reserved.
           </p>
         </div>
       </div>

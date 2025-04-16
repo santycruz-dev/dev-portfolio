@@ -32,32 +32,32 @@ const Index = () => {
           <div className="max-w-4xl space-y-8 animate-fade-in animate-slide-up">
             <div className="inline-block">
               <span className="px-3 py-1 text-xs font-semibold tracking-wider uppercase border border-primary/30 rounded-full bg-primary/10 text-primary mb-4">
-                Web3 Innovation
+                Web Innovation
               </span>
             </div>
             
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight leading-tight">
-              Enhancing <span className="text-gradient bg-gradient-to-r from-primary via-accent to-primary">New</span> Web3 Experience
+              Enhancing <span className="text-gradient bg-gradient-to-r from-primary via-accent to-primary">New</span> Web Experience
             </h1>
             
             <p className="text-xl text-muted-foreground max-w-2xl relative">
-              Construyo experiencias web modernas, accesibles y de alto rendimiento
-              que conectan con los usuarios y resuelven problemas reales.
+              I build modern, accessible, high-performance web experiences
+              that connect with users and solve real problems.
               <span className="absolute -left-6 top-0 h-full w-1 bg-primary/50 rounded-full"></span>
             </p>
             
             <div className="flex flex-wrap gap-4 pt-6">
               <Button size="lg" className="group relative overflow-hidden bg-gradient-to-r from-primary to-accent hover:from-primary/90 hover:to-accent/90 transition-all duration-300">
-                <Link to="/proyectos" className="flex items-center z-10 relative">
-                  Ver proyectos
+                <Link to="/projects" className="flex items-center z-10 relative">
+                  View projects
                   <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
                 </Link>
                 <span className="absolute inset-0 w-full h-full bg-white/10 transform translate-y-full group-hover:translate-y-0 transition-transform duration-300"></span>
               </Button>
               
               <Button size="lg" variant="outline" className="border-primary/20 hover:border-primary group">
-                <Link to="/contacto" className="flex items-center">
-                  Contactar
+                <Link to="/contact" className="flex items-center">
+                  Contact me
                   <ArrowRight className="ml-2 h-5 w-5 opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all" />
                 </Link>
               </Button>
@@ -65,24 +65,49 @@ const Index = () => {
             
             <div className="grid grid-cols-2 md:grid-cols-3 gap-4 mt-10 pt-6 border-t border-border/40">
               <div>
-                <div className="text-3xl font-bold text-primary">+50</div>
-                <div className="text-sm text-muted-foreground">Proyectos completados</div>
+                <div className="text-3xl font-bold text-primary">+15</div>
+                <div className="text-sm text-muted-foreground">Projects completed</div>
               </div>
               <div>
-                <div className="text-3xl font-bold text-primary">+5</div>
-                <div className="text-sm text-muted-foreground">Años de experiencia</div>
+                <div className="text-3xl font-bold text-primary">+3</div>
+                <div className="text-sm text-muted-foreground">Years of experience</div>
               </div>
               <div>
                 <div className="text-3xl font-bold text-primary">100%</div>
-                <div className="text-sm text-muted-foreground">Clientes satisfechos</div>
+                <div className="text-sm text-muted-foreground">Satisfied clients</div>
               </div>
             </div>
           </div>
         </div>
 
-        <div className="hidden md:block absolute bottom-10 right-10 w-64 h-64 border border-primary/20 rounded-full opacity-30 animate-pulse-slow"></div>
-        <div className="hidden md:block absolute top-1/3 right-32 w-32 h-32 border border-accent/20 rounded-full opacity-20 animate-pulse-slow" style={{ animationDelay: "1s" }}></div>
-        <div className="hidden md:block absolute bottom-20 left-10 w-40 h-40 border border-primary/30 rounded-full opacity-10 animate-pulse-slow" style={{ animationDelay: "1.5s" }}></div>
+        <div 
+          className="hidden md:block absolute bottom-10 right-10 w-64 h-64 rounded-full"
+          style={{
+            background: 'radial-gradient(circle, rgba(255,152,0,0.05) 0%, rgba(0,0,0,0) 85%)',
+            filter: 'blur(15px)',
+            animation: 'pulse-glow 10s ease-in-out infinite',
+            opacity: '0.5'
+          }}
+        />
+        <div 
+          className="hidden md:block absolute bottom-20 left-10 w-40 h-40 rounded-full"
+          style={{
+            background: 'radial-gradient(circle, rgba(255,152,0,0.03) 0%, rgba(0,0,0,0) 85%)',
+            filter: 'blur(12px)',
+            animation: 'pulse-glow 8s ease-in-out infinite',
+            opacity: '0.3'
+          }}
+        />
+        <div 
+          className="hidden md:block absolute top-1/3 right-32 w-32 h-32 rounded-full"
+          style={{
+            background: 'radial-gradient(circle, rgba(255,152,0,0.04) 0%, rgba(0,0,0,0) 85%)',
+            filter: 'blur(10px)',
+            animation: 'pulse-glow 9s ease-in-out infinite',
+            opacity: '0.3',
+            animationDelay: '1s'
+          }}
+        />
       </section>
 
       {/* Features section */}
@@ -126,8 +151,25 @@ const Index = () => {
           </div>
         </div>
 
-        <div className="hidden md:block absolute -bottom-20 right-10 w-40 h-40 border border-primary/20 rounded-full opacity-20 animate-pulse-slow"></div>
-        <div className="hidden md:block absolute top-40 left-10 w-20 h-20 border border-accent/20 rounded-full opacity-10 animate-pulse-slow" style={{ animationDelay: "1.2s" }}></div>
+        <div 
+          className="hidden md:block absolute -bottom-20 right-10 w-40 h-40 rounded-full"
+          style={{
+            background: 'radial-gradient(circle, rgba(255,152,0,0.03) 0%, rgba(0,0,0,0) 85%)',
+            filter: 'blur(12px)',
+            animation: 'pulse-glow 8s ease-in-out infinite',
+            opacity: '0.3'
+          }}
+        />
+        <div 
+          className="hidden md:block absolute top-40 left-10 w-20 h-20 rounded-full"
+          style={{
+            background: 'radial-gradient(circle, rgba(255,152,0,0.02) 0%, rgba(0,0,0,0) 85%)',
+            filter: 'blur(8px)',
+            animation: 'pulse-glow 7s ease-in-out infinite',
+            opacity: '0.3',
+            animationDelay: '1.2s'
+          }}
+        />
       </section>
 
       {/* Services section */}
@@ -141,48 +183,53 @@ const Index = () => {
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div className="border border-border/40 bg-card p-6 rounded-md">
-              <div className="flex items-center gap-3 mb-4">
+                        
+            <div className="border border-border/40 bg-card p-6 rounded-md group transition-all duration-300 hover:border-primary/30 relative overflow-hidden">
+              <div className="absolute inset-0 bg-gradient-to-br from-secondary/40 to-primary/10 opacity-0 group-hover:opacity-20 transition-opacity duration-500"></div>
+              <div className="flex items-center gap-3 mb-4 relative z-10">
                 <Code className="h-5 w-5 text-primary" />
                 <h3 className="text-lg font-semibold">Frontend Development</h3>
               </div>
-              <p className="text-muted-foreground mb-6">
+              <p className="text-muted-foreground mb-6 relative z-10">
                 Creating responsive, accessible, and performant user interfaces with modern frameworks like React, Next.js, and TypeScript.
               </p>
-              <Link to="/services" className="text-primary text-sm hover:underline">Learn more</Link>
+              <Link to="/services" className="text-primary text-sm hover:underline relative z-10">Learn more</Link>
             </div>
             
-            <div className="border border-border/40 bg-card p-6 rounded-md">
-              <div className="flex items-center gap-3 mb-4">
+            <div className="border border-border/40 bg-card p-6 rounded-md group transition-all duration-300 hover:border-primary/30 relative overflow-hidden">
+              <div className="absolute inset-0 bg-gradient-to-br from-secondary/40 to-primary/10 opacity-0 group-hover:opacity-20 transition-opacity duration-500"></div>
+              <div className="flex items-center gap-3 mb-4 relative z-10">
                 <Database className="h-5 w-5 text-primary" />
                 <h3 className="text-lg font-semibold">Web3 Integration</h3>
               </div>
-              <p className="text-muted-foreground mb-6">
+              <p className="text-muted-foreground mb-6 relative z-10">
                 Implementing blockchain solutions, smart contract integration, and decentralized applications with Ethereum, Solana, and more.
               </p>
-              <Link to="/services" className="text-primary text-sm hover:underline">Learn more</Link>
+              <Link to="/services" className="text-primary text-sm hover:underline relative z-10">Learn more</Link>
             </div>
             
-            <div className="border border-border/40 bg-card p-6 rounded-md">
-              <div className="flex items-center gap-3 mb-4">
+            <div className="border border-border/40 bg-card p-6 rounded-md group transition-all duration-300 hover:border-primary/30 relative overflow-hidden">
+              <div className="absolute inset-0 bg-gradient-to-br from-secondary/40 to-primary/10 opacity-0 group-hover:opacity-20 transition-opacity duration-500"></div>
+              <div className="flex items-center gap-3 mb-4 relative z-10">
                 <Layout className="h-5 w-5 text-primary" />
                 <h3 className="text-lg font-semibold">UI/UX Design</h3>
               </div>
-              <p className="text-muted-foreground mb-6">
+              <p className="text-muted-foreground mb-6 relative z-10">
                 Designing intuitive user experiences and visually appealing interfaces that enhance user engagement and satisfaction.
               </p>
-              <Link to="/services" className="text-primary text-sm hover:underline">Learn more</Link>
+              <Link to="/services" className="text-primary text-sm hover:underline relative z-10">Learn more</Link>
             </div>
             
-            <div className="border border-border/40 bg-card p-6 rounded-md">
-              <div className="flex items-center gap-3 mb-4">
+            <div className="border border-border/40 bg-card p-6 rounded-md group transition-all duration-300 hover:border-primary/30 relative overflow-hidden">
+              <div className="absolute inset-0 bg-gradient-to-br from-secondary/40 to-primary/10 opacity-0 group-hover:opacity-20 transition-opacity duration-500"></div>
+              <div className="flex items-center gap-3 mb-4 relative z-10">
                 <Shield className="h-5 w-5 text-primary" />
                 <h3 className="text-lg font-semibold">Performance Optimization</h3>
               </div>
-              <p className="text-muted-foreground mb-6">
+              <p className="text-muted-foreground mb-6 relative z-10">
                 Improving application speed, responsiveness, and overall performance through advanced optimization techniques.
               </p>
-              <Link to="/services" className="text-primary text-sm hover:underline">Learn more</Link>
+              <Link to="/services" className="text-primary text-sm hover:underline relative z-10">Learn more</Link>
             </div>
           </div>
         </div>

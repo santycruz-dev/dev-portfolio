@@ -1,4 +1,3 @@
-
 import React from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -13,11 +12,11 @@ const ContactPage = () => {
         <div className="container">
           <div className="max-w-3xl mb-16 animate-fade-in">
             <h1 className="text-4xl md:text-5xl font-bold mb-6">
-              <span className="text-primary">Contacto</span>
+              <span className="text-primary">Contact</span>
             </h1>
             <div className="w-24 h-px bg-primary mb-6"></div>
             <p className="text-xl text-muted-foreground">
-              ¿Tienes un proyecto en mente o quieres hablar sobre oportunidades de colaboración? Estoy aquí para ayudarte.
+              Do you have a project in mind or want to discuss collaboration opportunities? I'm here to help.
             </p>
           </div>
           

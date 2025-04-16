@@ -1,4 +1,3 @@
-
 import React from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -22,9 +21,9 @@ const Projects = () => {
             </p>
           </div>
           
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+          <div className="space-y-12 w-full">
             {projects.map((project, index) => (
-              <div key={index} className="animate-fade-in animate-slide-up" style={{ animationDelay: `${index * 150}ms` }}>
+              <div key={index} className="w-full animate-fade-in animate-slide-up" style={{ animationDelay: `${index * 150}ms` }}>
                 <ProjectCard project={project} />
               </div>
             ))}

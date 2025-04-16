@@ -1,4 +1,3 @@
-
 import React from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -12,9 +11,9 @@ const AboutMe = () => {
       <section className="py-16 md:py-24">
         <div className="container">
           <div className="max-w-3xl mx-auto text-center mb-16">
-            <h1 className="text-4xl md:text-5xl font-bold mb-4">Sobre Mí</h1>
+            <h1 className="text-4xl md:text-5xl font-bold mb-4">About Me</h1>
             <p className="text-xl text-muted-foreground">
-              Conoce más sobre mi experiencia, habilidades y trayectoria profesional
+              Learn more about my experience, skills and professional journey
             </p>
           </div>
           
@@ -22,29 +21,29 @@ const AboutMe = () => {
 
           <div className="mt-16 space-y-8 max-w-3xl mx-auto">
             <div>
-              <h2 className="text-2xl font-bold mb-4">Mi historia</h2>
+              <h2 className="text-2xl font-bold mb-4">My Story</h2>
               <p className="text-muted-foreground mb-4">
-                Mi camino en el desarrollo web comenzó hace más de 5 años, cuando descubrí la fascinante combinación de lógica y creatividad que ofrece el frontend. Desde entonces, he trabajado en una variedad de proyectos que han fortalecido mi experiencia y ampliado mis habilidades.
+                My journey in web development began over 5 years ago when I discovered the fascinating combination of logic and creativity that frontend offers. Since then, I've worked on a variety of projects that have strengthened my experience and expanded my skills.
               </p>
               <p className="text-muted-foreground">
-                Lo que más disfruto del desarrollo frontend es la constante evolución y el reto de crear interfaces que no solo sean visualmente atractivas, sino también funcionales, accesibles e intuitivas para todo tipo de usuarios.
+                What I enjoy most about frontend development is the constant evolution and the challenge of creating interfaces that are not only visually appealing but also functional, accessible and intuitive for all types of users.
               </p>
             </div>
 
             <div>
-              <h2 className="text-2xl font-bold mb-4">Filosofía de trabajo</h2>
+              <h2 className="text-2xl font-bold mb-4">Work Philosophy</h2>
               <p className="text-muted-foreground mb-4">
-                Creo firmemente en el desarrollo centrado en el usuario. Cada línea de código que escribo tiene como objetivo mejorar la experiencia de las personas que utilizarán el producto final.
+                I firmly believe in user-centered development. Every line of code I write aims to improve the experience of the people who will use the final product.
               </p>
               <p className="text-muted-foreground">
-                Mi enfoque combina principios de diseño moderno con buenas prácticas de desarrollo, accesibilidad web y optimización de rendimiento, siempre buscando el equilibrio perfecto entre estética y funcionalidad.
+                My approach combines modern design principles with development best practices, web accessibility and performance optimization, always seeking the perfect balance between aesthetics and functionality.
               </p>
             </div>
 
             <div>
-              <h2 className="text-2xl font-bold mb-4">Fuera del código</h2>
+              <h2 className="text-2xl font-bold mb-4">Beyond Coding</h2>
               <p className="text-muted-foreground">
-                Cuando no estoy programando, me gusta mantenerme actualizado sobre nuevas tecnologías, participar en comunidades de desarrollo y contribuir a proyectos open source. También disfruto de la fotografía, los videojuegos y explorar nuevos lugares.
+                When I'm not programming, I like to stay updated about new technologies, participate in developer communities and contribute to open source projects. I also enjoy photography, video games and exploring new places.
               </p>
             </div>
           </div>

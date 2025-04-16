@@ -45,7 +45,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, isPreview = false })
             className="w-full h-full object-cover transition-transform duration-700 ease-in-out group-hover:scale-105" 
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 ease-in-out flex items-end p-3">
-            <span className="text-white text-xs font-medium">Ver proyecto</span>
+            <span className="text-white text-xs font-medium">View project</span>
           </div>
         </div>
 
@@ -62,7 +62,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, isPreview = false })
             ))}
             
             {technologies.length > 3 && (
-              <span className="bg-secondary/20 text-secondary-foreground px-2 py-1 rounded-full text-xs font-medium">
+              <span className="bg-zinc-800/20 text-orange-500 px-2 py-1 rounded-full text-xs font-medium">
                 +{technologies.length - 3}
               </span>
             )}
@@ -99,10 +99,10 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, isPreview = false })
             )}
           </div>
           <Link 
-            to="/proyectos" 
+            to="/projects" 
             className="text-primary hover:text-primary/80 transition-colors duration-300 text-sm flex items-center gap-1 font-medium"
           >
-            Ver detalles <ArrowRight className="h-3 w-3 transition-transform duration-300 ease-in-out group-hover:translate-x-1" />
+            View details <ArrowRight className="h-3 w-3 transition-transform duration-300 ease-in-out group-hover:translate-x-1" />
           </Link>
         </div>
       </div>
@@ -126,16 +126,16 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, isPreview = false })
         <div className="space-y-4">
           <div className="p-4 bg-muted/50 rounded-lg border border-border/30">
             <h4 className="text-lg font-semibold mb-2 flex items-center">
-              <span className="h-1.5 w-1.5 rounded-full bg-primary mr-2"></span>
-              Objetivo y contexto
+              <span className="h-1.5 w-1.5 rounded-full bg-orange-500 mr-2"></span>
+              Objective and context
             </h4>
             <p className="text-muted-foreground text-sm">{objective}</p>
           </div>
 
           <div className="p-4 bg-muted/50 rounded-lg border border-border/30">
             <h4 className="text-lg font-semibold mb-2 flex items-center">
-              <span className="h-1.5 w-1.5 rounded-full bg-primary mr-2"></span>
-              Desafíos y soluciones
+              <span className="h-1.5 w-1.5 rounded-full bg-orange-500 mr-2"></span>
+              Challenges and solutions
             </h4>
             <p className="text-muted-foreground text-sm">{challenges}</p>
           </div>
@@ -144,16 +144,16 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, isPreview = false })
         <div className="space-y-4">
           <div className="p-4 bg-muted/50 rounded-lg border border-border/30">
             <h4 className="text-lg font-semibold mb-2 flex items-center">
-              <span className="h-1.5 w-1.5 rounded-full bg-primary mr-2"></span>
-              Resultados y aprendizajes
+              <span className="h-1.5 w-1.5 rounded-full bg-orange-500 mr-2"></span>
+              Results and learnings
             </h4>
             <p className="text-muted-foreground text-sm">{results}</p>
           </div>
 
           <div className="p-4 bg-muted/50 rounded-lg border border-border/30">
             <h4 className="text-lg font-semibold mb-2 flex items-center">
-              <span className="h-1.5 w-1.5 rounded-full bg-primary mr-2"></span>
-              Características destacadas
+              <span className="h-1.5 w-1.5 rounded-full bg-orange-500 mr-2"></span>
+              Key features
             </h4>
             <ul className="text-muted-foreground text-sm space-y-1">
               {features.map((feature, index) => (
@@ -170,7 +170,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, isPreview = false })
       <div className="mb-6">
         <h4 className="text-lg font-semibold mb-3 flex items-center">
           <span className="h-1.5 w-1.5 rounded-full bg-primary mr-2"></span>
-          Tecnologías
+          Technologies
         </h4>
         <div className="flex flex-wrap gap-2">
           {technologies.map((tech, index) => (
@@ -184,12 +184,12 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, isPreview = false })
       <div className="flex flex-wrap gap-4 mt-8 pt-4 border-t border-border/30">
         <Button asChild variant="default" className="bg-gradient-to-r from-primary to-primary/80 hover:from-primary/90 hover:to-primary/70 transition-all duration-300">
           <a href={demoUrl} target="_blank" rel="noopener noreferrer" className="flex items-center">
-            <ExternalLink className="mr-2 h-4 w-4" /> Ver demo
+            <ExternalLink className="mr-2 h-4 w-4" /> View demo
           </a>
         </Button>
         <Button asChild variant="outline" className="border-primary/20 hover:border-primary/40 hover:bg-primary/5">
           <a href={repoUrl} target="_blank" rel="noopener noreferrer" className="flex items-center">
-            <Github className="mr-2 h-4 w-4" /> Ver código
+            <Github className="mr-2 h-4 w-4" /> View code
           </a>
         </Button>
       </div>
