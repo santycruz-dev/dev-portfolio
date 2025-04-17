@@ -9,7 +9,7 @@ export default defineConfig(({ mode }) => ({
     host: "::",
     port: 8080,
   },
-  base: '/pixel-perfect-frontend-hub/',
+  base: '/dev-portfolio',
   plugins: [
     react(),
     mode === 'development' &&
