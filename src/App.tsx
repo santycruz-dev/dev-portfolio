@@ -1,10 +1,10 @@
-
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import React from 'react'; // Added React import
+import React from 'react';
+
 import Index from "./pages/Index";
 import Projects from "./pages/Projects";
 import AboutMe from "./pages/AboutMe";
@@ -14,6 +14,9 @@ import NotFound from "./pages/NotFound";
 // Create a client
 const queryClient = new QueryClient();
 
+// Cambia esto por el nombre de tu repo en GitHub
+const BASENAME = "/dev-portfolio";
+
 const App: React.FC = () => {
   return (
     <React.StrictMode>
@@ -21,7 +24,7 @@ const App: React.FC = () => {
         <TooltipProvider>
           <Toaster />
           <Sonner />
-          <BrowserRouter>
+          <BrowserRouter basename={BASENAME}>
             <Routes>
               <Route path="/" element={<Index />} />
               <Route path="/proyectos" element={<Projects />} />
