@@ -37,7 +37,7 @@ const Index = () => {
             </div>
             
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight leading-tight">
-              Enhancing <span className="text-gradient bg-gradient-to-r from-primary via-accent to-primary">New</span> Web Experience
+              Freelance <span className="text-gradient bg-gradient-to-r from-primary via-accent to-primary">Frontend</span> Web3 Developer
             </h1>
             
             <p className="text-xl text-muted-foreground max-w-2xl relative">
@@ -47,19 +47,25 @@ const Index = () => {
             </p>
             
             <div className="flex flex-wrap gap-4 pt-6">
-              <Button size="lg" className="group relative overflow-hidden bg-gradient-to-r from-primary to-accent hover:from-primary/90 hover:to-accent/90 transition-all duration-300">
-                <Link to="/projects" className="flex items-center z-10 relative">
-                  View projects
-                  <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
-                </Link>
+              <Button size="lg" className="group relative overflow-hidden bg-gradient-to-r from-primary to-accent hover:from-primary/90 hover:to-accent/90 transition-all duration-300" onClick={() => {
+                const projectsSection = document.getElementById('projects');
+                if (projectsSection) {
+                  projectsSection.scrollIntoView({ behavior: 'smooth' });
+                }
+              }}>
+                View projects
+                <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
                 <span className="absolute inset-0 w-full h-full bg-white/10 transform translate-y-full group-hover:translate-y-0 transition-transform duration-300"></span>
               </Button>
               
-              <Button size="lg" variant="outline" className="border-primary/20 hover:border-primary group">
-                <Link to="/contact" className="flex items-center">
-                  Contact me
-                  <ArrowRight className="ml-2 h-5 w-5 opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all" />
-                </Link>
+              <Button size="lg" variant="outline" className="border-primary/20 hover:border-primary group" onClick={() => {
+                const contactSection = document.getElementById('contact');
+                if (contactSection) {
+                  contactSection.scrollIntoView({ behavior: 'smooth' });
+                }
+              }}>
+                Contact me
+                <ArrowRight className="ml-2 h-5 w-5 opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all" />
               </Button>
             </div>
             
@@ -111,7 +117,7 @@ const Index = () => {
       </section>
 
       {/* Features section */}
-      <section className="py-20 relative overflow-hidden bg-gradient-to-br from-background via-background to-secondary/20">
+      <section id="projects" className="py-20 relative overflow-hidden bg-gradient-to-br from-background via-background to-secondary/20">
         <div className="absolute inset-0 overflow-hidden">
           <div className="absolute top-20 right-40 w-72 h-72 bg-primary/5 rounded-full blur-3xl"></div>
           <div className="absolute bottom-10 left-20 w-64 h-64 bg-accent/5 rounded-full blur-3xl"></div>
@@ -287,7 +293,9 @@ const Index = () => {
 
   
       {/* Contact section */}
-      <Contact />
+      <section id="contact">
+        <Contact />
+      </section>
 
       <Footer />
     </div>

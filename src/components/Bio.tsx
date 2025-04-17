@@ -27,8 +27,24 @@ const Bio: React.FC = () => {
               My approach combines solid technical skills with an eye for design, allowing me to build applications that are both functional and visually appealing. I constantly stay updated with the latest technologies and best practices in web development.
             </p>
             <div className="pt-4">
-              <Button className="flex items-center">
-                <FileDown className="mr-2 h-4 w-4" /> Download CV
+              <Button className="flex items-center" style={{
+                background: 'linear-gradient(45deg, #ff9800, #ff5722)',
+                boxShadow: '0 4px 15px rgba(255, 152, 0, 0.4)',
+                color: 'white',
+                transition: 'all 0.3s ease'
+              }} onMouseEnter={(e) => {
+                const button = e.currentTarget;
+                button.style.background = 'linear-gradient(45deg, #ff5722, #ff9800)';
+                button.style.transform = 'translateY(-1px)';
+              }} onMouseLeave={(e) => {
+                const button = e.currentTarget;
+                button.style.background = 'linear-gradient(45deg, #ff9800, #ff5722)';
+                button.style.transform = 'translateY(0)';
+              }} onClick={(e) => {
+                const button = e.currentTarget;
+                button.style.transform = 'translateY(0)';
+              }}>
+                <FileDown className="mr-2 h-4 w-4" style={{ color: 'white' }} /> Download CV
               </Button>
             </div>
           </div>
@@ -41,9 +57,9 @@ const Bio: React.FC = () => {
                 <ul className="space-y-6 pl-3">
                   <li className="relative border-l border-primary/30 pl-6 pb-2 group/item transition-all duration-300">
                     <div className="absolute -left-1.5 mt-1.5 h-3 w-3 rounded-full border border-background bg-primary group-hover/item:scale-110 transition-transform"></div>
-                    <h4 className="font-semibold group-hover/item:text-primary transition-colors">Senior Frontend Developer</h4>
-                    <p className="text-sm text-muted-foreground">Empresa XYZ · 2020 - Present</p>
-                    <p className="text-sm mt-1">Development of web applications with React and Next.js, frontend architecture implementation and performance optimization.</p>
+                    <h4 className="font-semibold group-hover/item:text-primary transition-colors">Frontend Web3 Developer at Digica LLC</h4>
+                    <p className="text-sm text-muted-foreground">Digica LLC · 2024 - Present</p>
+                    <p className="text-sm mt-1">Development of web3 applications with React and Next.js, implementation of frontend architecture, and performance optimization.</p>
                   </li>
                   <li className="relative border-l border-primary/30 pl-6 pb-2 group/item transition-all duration-300">
                     <div className="absolute -left-1.5 mt-1.5 h-3 w-3 rounded-full border border-background bg-primary group-hover/item:scale-110 transition-transform"></div>

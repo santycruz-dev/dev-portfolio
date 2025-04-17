@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { Menu, X } from "lucide-react";
+import { Menu, X, FileDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const Header: React.FC = () => {
@@ -60,6 +60,9 @@ const Header: React.FC = () => {
           <Link to="/contacto" className={`nav-link ${isActive('/contacto') ? 'active-nav-link' : ''}`}>
             Contact
           </Link>
+          <Link to="/blog" className={`nav-link ${isActive('/blog') ? 'active-nav-link' : ''}`}>
+            Blog
+          </Link>
         </nav>
 
         {/* Mobile menu button */}
@@ -107,6 +110,24 @@ const Header: React.FC = () => {
               >
                 Contact
               </Link>
+              <Link
+                to="/blog"
+                className="nav-link w-full text-center text-xl py-3"
+                onClick={closeMenu}
+              >
+                Blog
+              </Link>
+              <div className="w-full text-center py-3">
+                <a 
+                  href="/cv.pdf"
+                  download
+                  className="flex items-center justify-center gap-2 text-primary hover:text-primary/80 transition-colors duration-300"
+                  onClick={closeMenu}
+                >
+                  <FileDown className="h-5 w-5" />
+                  Download CV
+                </a>
+              </div>
             </nav>
           </div>
         )}

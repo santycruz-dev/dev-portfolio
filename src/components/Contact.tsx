@@ -72,19 +72,19 @@ const Contact: React.FC = () => {
               <div className="space-y-4">
                 <div className="flex items-center">
                   <Mail className="h-5 w-5 mr-3 text-primary" />
-                  <a href="mailto:tu@email.com" className="hover:text-primary transition-colors">
-                    tu@email.com
+                  <a href="mailto:santycruz.dev@gmail.com" className="hover:text-primary transition-colors">
+                    santycruz.dev@gmail.com
                   </a>
                 </div>
                 <div className="flex items-center">
                   <Github className="h-5 w-5 mr-3 text-primary" />
                   <a 
-                    href="https://github.com/username" 
+                    href="https://github.com/santycruz-dev" 
                     target="_blank" 
                     rel="noopener noreferrer"
                     className="hover:text-primary transition-colors"
                   >
-                    github.com/username
+                    github.com/santycruz-dev
                   </a>
                 </div>
                 <div className="flex items-center">
